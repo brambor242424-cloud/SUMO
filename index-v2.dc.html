@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<template id="__bundler_thumbnail" data-bg-color="#E2231A">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#E2231A"></rect>
+    <text x="600" y="390" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="700" font-size="140" fill="#ffffff">SUMO</text>
+    <text x="600" y="500" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="600" font-size="80" fill="#ffffff">stavby</text>
+  </svg>
+</template>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Inter',sans-serif;background:#FFFFFF;color:#4A4744}
+a{color:#E2231A;text-decoration:none}
+a:hover{color:#B8180F}
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+
+<div style="max-width:100%;overflow-x:hidden">
+
+<header style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px 24px;padding:18px 32px;background:#fff;border-bottom:1px solid #E7E2D8;position:fixed;top:0;left:0;right:0;z-index:50">
+  <a href="index.dc.html" style="display:flex;flex-direction:column;line-height:0.95">
+    <span style="font-family:'Poppins',sans-serif;font-weight:700;font-size:22px;color:#E2231A;letter-spacing:0.5px">SUMO</span>
+    <span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:13px;color:#1C1B19;letter-spacing:2px">STAVBY</span>
+  </a>
+  <nav style="display:flex;gap:24px;font-size:15px;font-weight:500;white-space:nowrap">
+    <a href="index.dc.html" style="color:#E2231A;font-weight:700">Domů</a>
+    <a href="o-nas.dc.html" style="color:#1C1B19">O nás</a>
+    <a href="sluzby.dc.html" style="color:#1C1B19">Služby</a>
+    <a href="realizace.dc.html" style="color:#1C1B19">Realizace</a>
+    <a href="kariera.dc.html" style="color:#1C1B19">Kariéra</a>
+    <a href="blog.dc.html" style="color:#1C1B19">Blog</a>
+    <a href="kontakt.dc.html" style="color:#1C1B19">Kontakt</a>
+  </nav>
+  <div style="display:flex;align-items:center;gap:24px">
+    <a href="kontakt.dc.html" style="background:#E2231A;color:#fff;padding:11px 22px;border-radius:8px;font-weight:600;font-size:14px;white-space:nowrap" style-hover="background:#B8180F">Nezávazná poptávka</a>
+  </div>
+</header>
+<div style="height:74px"></div>
+
+<section style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:64px;align-items:center;padding:96px 48px;max-width:1280px;margin:0 auto">
+  <div>
+    <span style="display:inline-block;background:#F5F2EC;color:#E2231A;font-weight:600;font-size:13px;letter-spacing:1px;padding:6px 14px;border-radius:100px;margin-bottom:24px">STAVEBNÍ FIRMA · JABLUNKOV</span>
+    <h1 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:52px;line-height:1.12;color:#1C1B19;margin:0 0 24px">Stavíme domy,<br>na které bude<br>rodina hrdá.</h1>
+    <p style="font-size:18px;line-height:1.6;color:#4A4744;margin:0 0 36px;max-width:520px">Jsme stavební firma, která se specializuje na výstavbu a rekonstrukce rodinných i bytových domů. Stavíme srdcem i rozumem – s důrazem na kvalitu, poctivost a osobní přístup ke každému projektu.</p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap">
+      <a href="kontakt.dc.html" style="background:#E2231A;color:#fff;padding:16px 32px;border-radius:8px;font-weight:600;font-size:16px" style-hover="background:#B8180F">Nezávazná poptávka</a>
+      <a href="sluzby.dc.html" style="border:1.5px solid #1C1B19;color:#1C1B19;padding:16px 32px;border-radius:8px;font-weight:600;font-size:16px" style-hover="background:#1C1B19;color:#fff">Naše služby</a>
+    </div>
+  </div>
+  <div style="width:100%;height:460px">
+    <image-slot id="hero-image" shape="rounded" radius="16" placeholder="Fotografie realizace – doplníme" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=75&amp;w=1600&amp;auto=format&amp;fit=crop" credit="Photo by Frames For Your Heart on Unsplash" credit-href="https://unsplash.com/@framesforyourheart"></image-slot>
+  </div>
+</section>
+
+<section style="padding:100px 48px;background:#fff">
+  <div style="max-width:1160px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:0.9fr 1.6fr;gap:64px;align-items:start">
+      <div style="position:sticky;top:110px">
+        <span style="display:inline-block;color:#E2231A;font-weight:700;font-size:13px;letter-spacing:2px;margin-bottom:16px">NAŠE HODNOTY</span>
+        <h2 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:38px;line-height:1.15;color:#1C1B19;margin:0 0 20px">Proč stavět<br>s námi</h2>
+        <p style="font-size:15.5px;line-height:1.7;color:#4A4744;margin:0">Čtyři principy, na kterých stavíme každou zakázku – od první schůzky až po předání klíčů.</p>
+      </div>
+      <div style="display:flex;flex-direction:column">
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;padding:28px 0;border-bottom:1px solid #E7E2D8">
+          <div style="width:72px;height:72px"><image-slot id="why-icon-1" shape="rounded" radius="18" placeholder="Ikona"></image-slot></div>
+          <div>
+            <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:21px;color:#1C1B19;margin:0 0 8px">Poctivost</h3>
+            <p style="font-size:15px;line-height:1.6;color:#4A4744;margin:0">Otevřená komunikace a reálné termíny i rozpočty po celou dobu stavby.</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;padding:28px 0;border-bottom:1px solid #E7E2D8">
+          <div style="width:72px;height:72px"><image-slot id="why-icon-2" shape="rounded" radius="18" placeholder="Ikona"></image-slot></div>
+          <div>
+            <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:21px;color:#1C1B19;margin:0 0 8px">Kvalita</h3>
+            <p style="font-size:15px;line-height:1.6;color:#4A4744;margin:0">Pečlivé provedení a kontrola kvality na každém kroku výstavby.</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;padding:28px 0;border-bottom:1px solid #E7E2D8">
+          <div style="width:72px;height:72px"><image-slot id="why-icon-3" shape="rounded" radius="18" placeholder="Ikona"></image-slot></div>
+          <div>
+            <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:21px;color:#1C1B19;margin:0 0 8px">Osobní přístup</h3>
+            <p style="font-size:15px;line-height:1.6;color:#4A4744;margin:0">Každý projekt řešíme individuálně, s jedním kontaktním člověkem.</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;padding:28px 0">
+          <div style="width:72px;height:72px"><image-slot id="why-icon-4" shape="rounded" radius="18" placeholder="Ikona"></image-slot></div>
+          <div>
+            <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:21px;color:#1C1B19;margin:0 0 8px">Vše na klíč</h3>
+            <p style="font-size:15px;line-height:1.6;color:#4A4744;margin:0">Od studie po kolaudaci zajistíme kompletní realizaci pod jednou střechou.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:96px 48px;max-width:1160px;margin:0 auto">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;flex-wrap:wrap;gap:16px">
+    <h2 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:34px;color:#1C1B19;margin:0">Komplexní realizace na klíč</h2>
+    <a href="sluzby.dc.html" style="font-weight:600;font-size:15px">Všechny služby →</a>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
+    <div style="border:1px solid #E7E2D8;border-radius:14px;padding:32px 24px">
+      <span style="font-family:'Poppins',sans-serif;font-weight:700;font-size:28px;color:#E2231A">01</span>
+      <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:17px;color:#1C1B19;margin:16px 0 10px">Studie a návrh</h3>
+      <p style="font-size:14px;line-height:1.6;color:#4A4744;margin:0">Architektonická studie a vizualizace budoucí stavby.</p>
+    </div>
+    <div style="border:1px solid #E7E2D8;border-radius:14px;padding:32px 24px">
+      <span style="font-family:'Poppins',sans-serif;font-weight:700;font-size:28px;color:#E2231A">02</span>
+      <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:17px;color:#1C1B19;margin:16px 0 10px">Projekt a povolení</h3>
+      <p style="font-size:14px;line-height:1.6;color:#4A4744;margin:0">Projektová dokumentace a vyřízení stavebního povolení.</p>
+    </div>
+    <div style="border:1px solid #E7E2D8;border-radius:14px;padding:32px 24px">
+      <span style="font-family:'Poppins',sans-serif;font-weight:700;font-size:28px;color:#E2231A">03</span>
+      <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:17px;color:#1C1B19;margin:16px 0 10px">Prováděcí dokumentace</h3>
+      <p style="font-size:14px;line-height:1.6;color:#4A4744;margin:0">Detailní výkresy a rozpočet pro samotnou realizaci.</p>
+    </div>
+    <div style="border:1px solid #E7E2D8;border-radius:14px;padding:32px 24px">
+      <span style="font-family:'Poppins',sans-serif;font-weight:700;font-size:28px;color:#E2231A">04</span>
+      <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:17px;color:#1C1B19;margin:16px 0 10px">Realizace stavby</h3>
+      <p style="font-size:14px;line-height:1.6;color:#4A4744;margin:0">Výstavba na klíč, řízení dodavatelů a předání díla.</p>
+    </div>
+  </div>
+</section>
+
+<section style="background:#1C1B19;padding:96px 48px">
+  <div style="max-width:1160px;margin:0 auto">
+    <h2 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:34px;color:#fff;margin:0 0 48px;text-align:center">Jak probíhá spolupráce</h2>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:20px">
+      <div>
+        <div style="color:#E2231A;font-family:'Poppins',sans-serif;font-weight:700;font-size:22px;margin-bottom:14px">1</div>
+        <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:15px;color:#fff;margin:0 0 8px">Konzultace</h3>
+        <p style="font-size:13.5px;line-height:1.6;color:#B9B6AF;margin:0">Nezávazná schůzka a prohlídka pozemku.</p>
+      </div>
+      <div>
+        <div style="color:#E2231A;font-family:'Poppins',sans-serif;font-weight:700;font-size:22px;margin-bottom:14px">2</div>
+        <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:15px;color:#fff;margin:0 0 8px">Studie</h3>
+        <p style="font-size:13.5px;line-height:1.6;color:#B9B6AF;margin:0">Návrh a vizualizace stavby.</p>
+      </div>
+      <div>
+        <div style="color:#E2231A;font-family:'Poppins',sans-serif;font-weight:700;font-size:22px;margin-bottom:14px">3</div>
+        <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:15px;color:#fff;margin:0 0 8px">Povolení</h3>
+        <p style="font-size:13.5px;line-height:1.6;color:#B9B6AF;margin:0">Projekt a vyřízení stavebního povolení.</p>
+      </div>
+      <div>
+        <div style="color:#E2231A;font-family:'Poppins',sans-serif;font-weight:700;font-size:22px;margin-bottom:14px">4</div>
+        <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:15px;color:#fff;margin:0 0 8px">Realizace</h3>
+        <p style="font-size:13.5px;line-height:1.6;color:#B9B6AF;margin:0">Samotná výstavba pod naším dohledem.</p>
+      </div>
+      <div>
+        <div style="color:#E2231A;font-family:'Poppins',sans-serif;font-weight:700;font-size:22px;margin-bottom:14px">5</div>
+        <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:15px;color:#fff;margin:0 0 8px">Předání</h3>
+        <p style="font-size:13.5px;line-height:1.6;color:#B9B6AF;margin:0">Kolaudace, předání a záruční servis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:96px 48px;max-width:1160px;margin:0 auto">
+  <h2 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:34px;color:#1C1B19;margin:0 0 12px;text-align:center">Co říkají naši klienti</h2>
+  <p style="text-align:center;color:#8A867F;font-size:14px;margin:0 0 48px">Recenze z Google</p>
+  <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:960px;margin:0 auto">
+    <div style="border:1px solid #E7E2D8;border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:16px">
+      <div style="color:#E2231A;font-weight:700;font-size:15px;letter-spacing:2px">★★★★★ <span style="color:#8A867F;font-weight:500;font-size:13px;letter-spacing:0">5/5</span></div>
+      <p style="font-size:15px;line-height:1.65;color:#4A4744;margin:0;font-style:italic">„Firmu SUMO STAVBY můžu jen doporučit na 100 %. Byla jsem maximálně spokojená, jak s dělníky, tak i s panem vedoucím, který byl vždy ochotný mi poradit. Doporučuji.“</p>
+      <div style="display:flex;align-items:center;gap:12px">
+        <div style="width:40px;height:40px;flex-shrink:0"><image-slot id="review-1-avatar" shape="circle" placeholder="Foto"></image-slot></div>
+        <div>
+          <p style="font-weight:600;font-size:14px;color:#1C1B19;margin:0">Jana Wasserrabová, Henčlov</p>
+          <p style="font-size:12.5px;color:#8A867F;margin:4px 0 0">Zdroj: recenze Google</p>
+        </div>
+      </div>
+    </div>
+    <div style="border:1px solid #E7E2D8;border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:16px">
+      <div style="color:#E2231A;font-weight:700;font-size:15px;letter-spacing:2px">★★★★★ <span style="color:#8A867F;font-weight:500;font-size:13px;letter-spacing:0">5/5</span></div>
+      <p style="font-size:15px;line-height:1.65;color:#4A4744;margin:0;font-style:italic">„Realizace zakázky zateplování RD touto firmou proběhla v pořádku a rád ji dál doporučím. Pan Sung je velmi vstřícný a vzdělaný v oboru.“</p>
+      <div style="display:flex;align-items:center;gap:12px">
+        <div style="width:40px;height:40px;flex-shrink:0"><image-slot id="review-2-avatar" shape="circle" placeholder="Foto"></image-slot></div>
+        <div>
+          <p style="font-weight:600;font-size:14px;color:#1C1B19;margin:0">Petr Holášek</p>
+          <p style="font-size:12.5px;color:#8A867F;margin:4px 0 0">Zdroj: recenze Google</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:96px 48px;max-width:820px;margin:0 auto">
+  <h2 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:32px;color:#1C1B19;margin:0 0 40px;text-align:center">Máte otázky?<br>Máme odpovědi</h2>
+  <div style="display:flex;flex-direction:column;gap:0;border-top:1px solid #E7E2D8">
+    <sc-for list="{{ faqs }}" as="faq" hint-placeholder-count="5">
+      <div style="border-bottom:1px solid #E7E2D8">
+        <div onClick="{{ toggleFaq }}" data-faq-index="{{ $index }}" style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 4px;cursor:pointer">
+          <span style="font-weight:600;font-size:15.5px;color:#1C1B19">{{ faq.q }}</span>
+          <span style="font-size:20px;color:#1C1B19;flex-shrink:0">{{ faq.sign }}</span>
+        </div>
+        <sc-if value="{{ faq.open }}" hint-placeholder-val="{{ false }}">
+          <div style="margin:0 4px 20px;max-width:680px">
+            <p style="margin:0 0 10px;font-size:14.5px;line-height:1.7;color:#4A4744">{{ faq.intro }}</p>
+            <ul style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px">
+              <sc-for list="{{ faq.steps }}" as="step" hint-placeholder-count="0">
+                <li style="font-size:14.5px;line-height:1.6;color:#4A4744">{{ step }}</li>
+              </sc-for>
+            </ul>
+          </div>
+        </sc-if>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section style="background:#F5F2EC;padding:80px 48px;text-align:center">
+  <h2 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:30px;color:#1C1B19;margin:0 0 16px">Máte stavební záměr?</h2>
+  <p style="font-size:16px;color:#4A4744;margin:0 0 32px">Probereme ho spolu a připravíme nezávaznou nabídku.</p>
+  <a href="kontakt.dc.html" style="background:#E2231A;color:#fff;padding:16px 36px;border-radius:8px;font-weight:600;font-size:16px" style-hover="background:#B8180F">Vyplnit poptávkový formulář</a>
+</section>
+
+<footer style="background:#1C1B19;padding:64px 48px 32px">
+  <div style="max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px">
+    <div>
+      <span style="font-family:'Poppins',sans-serif;font-weight:700;font-size:20px;color:#E2231A">SUMO</span><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:12px;color:#fff;letter-spacing:2px"> STAVBY</span>
+      <p style="font-size:14px;line-height:1.6;color:#B9B6AF;margin:16px 0 0;max-width:340px">Výstavba a rekonstrukce rodinných i bytových domů na klíč – od studie po realizaci.</p>
+    </div>
+    <div>
+      <h4 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:14px;color:#fff;margin:0 0 16px">Navigace</h4>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+        <a href="index.dc.html" style="color:#B9B6AF">Domů</a>
+        <a href="o-nas.dc.html" style="color:#B9B6AF">O nás</a>
+        <a href="sluzby.dc.html" style="color:#B9B6AF">Služby</a>
+        <a href="realizace.dc.html" style="color:#B9B6AF">Realizace</a>
+        <a href="kariera.dc.html" style="color:#B9B6AF">Kariéra</a>
+        <a href="blog.dc.html" style="color:#B9B6AF">Blog</a>
+        <a href="kontakt.dc.html" style="color:#B9B6AF">Kontakt</a>
+      </div>
+    </div>
+    <div>
+      <h4 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:14px;color:#fff;margin:0 0 16px">Kontakt</h4>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;color:#B9B6AF">
+        <span>Dukelská 134, 739 91 Jablunkov</span>
+        <a href="tel:+420778525725" style="color:#B9B6AF">778 525 725</a>
+        <a href="mailto:sumostavby@gmail.com" style="color:#B9B6AF">sumostavby@gmail.com</a>
+        <span>IČO: 05506913</span>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1160px;margin:48px auto 0;padding-top:24px;border-top:1px solid #33322F;font-size:13px;color:#7A776F">© 2026 SUMO stavby. Všechna práva vyhrazena.</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { q: '', openFaq: 1 };
+  faqData = [
+    { q: 'Kolik bude stát rekonstrukce?', a: 'Cena se vždy odvíjí od konkrétního zadání – rozsahu prací, stavu objektu a zvolených materiálů. Nejpřesnější nacenění vychází z architektonického návrhu a projektové dokumentace, kterou vám na začátku spolupráce připravíme.' },
+    { q: 'Co je architektonický návrh?', a: 'Jde o výchozí krok každého projektu. Náš architekt navrhne řešení podle vašich představ a potřeb a součástí návrhu je i stavební dokumentace, podle níž se stavba následně realizuje.' },
+    { q: 'Jak dlouho trvá rekonstrukce?', intro: 'Doba realizace se odvíjí od rozsahu a náročnosti zakázky – běžná rekonstrukce bytu 3+kk trvá zhruba 1 až 3 měsíce. Spolupráce obvykle probíhá v těchto krocích:', steps: ['Úvodní poptávka', 'Bezplatná konzultace s předběžným naceněním', 'Schůzka s architektem nad rozsahem prací a výběrem materiálů', 'Kompletní nabídka po dokončení návrhu', 'Podpis smlouvy s termínem předání', 'Samotná realizace s pravidelnými kontrolními dny', 'Finální úklid, nastěhování a předání s protokolem'] },
+    { q: 'Kdy je potřeba stavební povolení?', a: 'Záleží na rozsahu zásahu. Pokud rekonstrukce nezasahuje do nosných konstrukcí, povolení obvykle není potřeba – u zásahů do nosných zdí či fasády už ano. U komerčních prostor je nutné také při změně účelu využití (např. z obchodu na restauraci). Vždy doporučujeme situaci probrat i s příslušným SVJ.' },
+    { q: 'Co obnáší rekonstrukce bytu?', a: 'Po architektonickém návrhu a vyřízení potřebné administrativy následuje samotná realizace: bourací a zednické práce, nové rozvody elektřiny, vody a topení, omítky, obklady a dlažby, osazení dveří, montáž zásuvek, vypínačů a svítidel, pokládka podlah a montáž kuchyně i vestavěných skříní na míru – a na závěr úklid a předání s protokolem.' }
+  ];
+  renderVals() {
+    const INDEX = [
+      { title: 'Domů', href: 'index.dc.html', note: 'Úvodní stránka', kw: 'domů úvod hlavní stránka sumo stavby' },
+      { title: 'O nás', href: 'o-nas.dc.html', note: 'Kdo jsme a naše hodnoty', kw: 'o nás firma hodnoty tým poctivost kvalita osobní přístup jablunkov' },
+      { title: 'Služby', href: 'sluzby.dc.html', note: 'Studie, projekt, povolení, realizace', kw: 'služby studie návrh projektová dokumentace stavební povolení prováděcí realizace na klíč rekonstrukce výstavba' },
+      { title: 'Realizace', href: 'realizace.dc.html', note: 'Fotogalerie dokončených staveb', kw: 'realizace reference fotografie galerie stavby dokončené' },
+      { title: 'Kontakt', href: 'kontakt.dc.html', note: 'Poptávkový formulář a kontakty', kw: 'kontakt poptávka formulář telefon e-mail adresa ičo' },
+      { title: 'Postup spolupráce', href: 'index.dc.html', note: 'Jak probíhá spolupráce krok za krokem', kw: 'postup spolupráce kroky konzultace předání' },
+      { title: 'Recenze klientů', href: 'index.dc.html', note: 'Co říkají naši klienti', kw: 'recenze klienti hodnocení' }
+    ];
+    const q = this.state.q.trim().toLowerCase();
+    const results = q ? INDEX.filter(p => (p.title + ' ' + p.kw).toLowerCase().includes(q)).slice(0, 6) : [];
+    return {
+      q: this.state.q,
+      setQ: e => this.setState({ q: e.target.value }),
+      results,
+      hasResults: results.length > 0,
+      faqs: this.faqData.map((f, i) => ({ q: f.q, intro: f.intro ?? f.a, steps: f.steps ?? [], open: this.state.openFaq === i, sign: this.state.openFaq === i ? '−' : '+' })),
+      toggleFaq: e => {
+        const i = Number(e.currentTarget.getAttribute('data-faq-index'));
+        this.setState(s => ({ openFaq: s.openFaq === i ? -1 : i }));
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

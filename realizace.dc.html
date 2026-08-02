@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<template id="__bundler_thumbnail" data-bg-color="#E2231A">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#E2231A"></rect>
+    <text x="600" y="390" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="700" font-size="140" fill="#ffffff">SUMO</text>
+    <text x="600" y="500" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="600" font-size="80" fill="#ffffff">stavby</text>
+  </svg>
+</template>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Inter',sans-serif;background:#FFFFFF;color:#4A4744}
+a{color:#E2231A;text-decoration:none}
+a:hover{color:#B8180F}
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+
+<div style="max-width:100%;overflow-x:hidden">
+
+<header style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px 24px;padding:18px 32px;background:#fff;border-bottom:1px solid #E7E2D8;position:fixed;top:0;left:0;right:0;z-index:50">
+  <a href="index.dc.html" style="display:flex;flex-direction:column;line-height:0.95">
+    <span style="font-family:'Poppins',sans-serif;font-weight:700;font-size:22px;color:#E2231A;letter-spacing:0.5px">SUMO</span>
+    <span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:13px;color:#1C1B19;letter-spacing:2px">STAVBY</span>
+  </a>
+  <nav style="display:flex;gap:24px;font-size:15px;font-weight:500;white-space:nowrap">
+    <a href="index.dc.html" style="color:#1C1B19">Domů</a>
+    <a href="o-nas.dc.html" style="color:#1C1B19">O nás</a>
+    <a href="sluzby.dc.html" style="color:#1C1B19">Služby</a>
+    <a href="realizace.dc.html" style="color:#E2231A;font-weight:700">Realizace</a>
+    <a href="kariera.dc.html" style="color:#1C1B19">Kariéra</a>
+    <a href="blog.dc.html" style="color:#1C1B19">Blog</a>
+    <a href="kontakt.dc.html" style="color:#1C1B19">Kontakt</a>
+  </nav>
+  <div style="display:flex;align-items:center;gap:24px">
+    <a href="kontakt.dc.html" style="background:#E2231A;color:#fff;padding:11px 22px;border-radius:8px;font-weight:600;font-size:14px;white-space:nowrap" style-hover="background:#B8180F">Nezávazná poptávka</a>
+  </div>
+</header>
+<div style="height:74px"></div>
+
+<section style="padding:88px 48px 48px;max-width:900px;margin:0 auto;text-align:center">
+  <span style="display:inline-block;background:#F5F2EC;color:#E2231A;font-weight:600;font-size:13px;letter-spacing:1px;padding:6px 14px;border-radius:100px;margin-bottom:24px">REALIZACE</span>
+  <h1 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:44px;line-height:1.2;color:#1C1B19;margin:0 0 24px">Naše dokončené stavby</h1>
+  <p style="font-size:17px;line-height:1.7;color:#4A4744;margin:0">Fotografie jsou zatím ilustrační – snímky našich vlastních realizací brzy doplníme.</p>
+</section>
+
+<section style="max-width:1160px;margin:0 auto;padding:0 48px 96px">
+  <h2 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:28px;color:#1C1B19;margin:0 0 32px;text-align:center">Naše nejnovější projekty</h2>
+  <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px">
+
+    <a href="realizace-2.dc.html" style="display:block;border:1px solid #E7E2D8;border-radius:14px;overflow:hidden;background:#fff" style-hover="box-shadow:0 8px 24px rgba(0,0,0,0.08)">
+      <div style="width:100%;height:190px"><image-slot id="realizace-1" shape="rect" placeholder="Náhledová fotka zakázky" src="assets/realizace-2-byt.jpeg"></image-slot></div>
+      <div style="padding:18px">
+        <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:16px;color:#1C1B19;margin:0 0 8px;line-height:1.3">Kompletní rekonstrukce bytu | Opava–Kateřinky</h3>
+        <p style="font-size:13.5px;line-height:1.55;color:#4A4744;margin:0">Kompletní rekonstrukce bytu včetně nových povrchů, podlah, dveří, koupelny a kuchyně na míru.</p>
+      </div>
+    </a>
+
+    <a href="realizace-1.dc.html" style="display:block;border:1px solid #E7E2D8;border-radius:14px;overflow:hidden;background:#fff" style-hover="box-shadow:0 8px 24px rgba(0,0,0,0.08)">
+      <div style="width:100%;height:190px"><image-slot id="realizace-2" shape="rect" placeholder="Náhledová fotka zakázky" src="assets/realizace-1-jezirko.jpeg"></image-slot></div>
+      <div style="padding:18px">
+        <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:16px;color:#1C1B19;margin:0 0 8px;line-height:1.3">Realizace přírodního koupacího jezírka | Praha</h3>
+        <p style="font-size:13.5px;line-height:1.55;color:#4A4744;margin:0">Kompletní realizace přírodního koupacího jezírka včetně terénních úprav, kamenných prvků, technologie filtrace a dřevěných pochozích ploch.</p>
+      </div>
+    </a>
+
+    <a href="realizace-3.dc.html" style="display:block;border:1px solid #E7E2D8;border-radius:14px;overflow:hidden;background:#fff" style-hover="box-shadow:0 8px 24px rgba(0,0,0,0.08)">
+      <div style="width:100%;height:190px"><image-slot id="realizace-3" shape="rect" placeholder="Náhledová fotka zakázky"></image-slot></div>
+      <div style="padding:18px">
+        <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:16px;color:#1C1B19;margin:0 0 8px;line-height:1.3">Rekonstrukce bytu | Ostrava - Vítkovice</h3>
+        <p style="font-size:13.5px;line-height:1.55;color:#4A4744;margin:0">Kompletní rekonstrukce 2KK bytu včetně nových podlah, dveří, koupelny, samostatného WC a kuchyně na míru.</p>
+      </div>
+    </a>
+
+    <a href="realizace-4.dc.html" style="display:block;border:1px solid #E7E2D8;border-radius:14px;overflow:hidden;background:#fff" style-hover="box-shadow:0 8px 24px rgba(0,0,0,0.08)">
+      <div style="width:100%;height:190px"><image-slot id="realizace-4" shape="rect" placeholder="Náhledová fotka zakázky" src="https://images.unsplash.com/photo-1627141234469-24711efb373c?q=75&w=900&auto=format&fit=crop" credit="Photo by André François McKenzie on Unsplash" credit-href="https://unsplash.com/@silverhousehd"></image-slot></div>
+      <div style="padding:18px">
+        <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:16px;color:#1C1B19;margin:0 0 8px;line-height:1.3">Rekonstrukce kuchyně | Frýdek-Místek</h3>
+        <p style="font-size:13.5px;line-height:1.55;color:#4A4744;margin:0">Rekonstrukce kuchyně a obývací části včetně nábytku na míru.</p>
+      </div>
+    </a>
+
+    <a href="realizace-5.dc.html" style="display:block;border:1px solid #E7E2D8;border-radius:14px;overflow:hidden;background:#fff" style-hover="box-shadow:0 8px 24px rgba(0,0,0,0.08)">
+      <div style="width:100%;height:190px"><image-slot id="realizace-5" shape="rect" placeholder="Náhledová fotka zakázky" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=75&w=900&auto=format&fit=crop" credit="Photo by Frames For Your Heart on Unsplash" credit-href="https://unsplash.com/@framesforyourheart"></image-slot></div>
+      <div style="padding:18px">
+        <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:16px;color:#1C1B19;margin:0 0 8px;line-height:1.3">Novostavba rodinného domu | Návsí</h3>
+        <p style="font-size:13.5px;line-height:1.55;color:#4A4744;margin:0">Výstavba rodinného domu na klíč od studie po předání.</p>
+      </div>
+    </a>
+
+    <a href="realizace-6.dc.html" style="display:block;border:1px solid #E7E2D8;border-radius:14px;overflow:hidden;background:#fff" style-hover="box-shadow:0 8px 24px rgba(0,0,0,0.08)">
+      <div style="width:100%;height:190px"><image-slot id="realizace-6" shape="rect" placeholder="Náhledová fotka zakázky" src="https://images.unsplash.com/photo-1691425700585-c108acad6467?q=75&w=900&auto=format&fit=crop" credit="Photo by Andre Morales Kalamar on Unsplash" credit-href="https://unsplash.com/@andre___mk"></image-slot></div>
+      <div style="padding:18px">
+        <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:16px;color:#1C1B19;margin:0 0 8px;line-height:1.3">Bytový dům na klíč | Jablunkov</h3>
+        <p style="font-size:13.5px;line-height:1.55;color:#4A4744;margin:0">Výstavba bytového domu pro investora, od projektu po kolaudaci.</p>
+      </div>
+    </a>
+
+    <a href="realizace-7.dc.html" style="display:block;border:1px solid #E7E2D8;border-radius:14px;overflow:hidden;background:#fff" style-hover="box-shadow:0 8px 24px rgba(0,0,0,0.08)">
+      <div style="width:100%;height:190px"><image-slot id="realizace-7" shape="rect" placeholder="Náhledová fotka zakázky"></image-slot></div>
+      <div style="padding:18px">
+        <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:16px;color:#1C1B19;margin:0 0 8px;line-height:1.3">Nová realizace</h3>
+        <p style="font-size:13.5px;line-height:1.55;color:#4A4744;margin:0">Popis zakázky doplníme.</p>
+      </div>
+    </a>
+
+    <a href="realizace-8.dc.html" style="display:block;border:1px solid #E7E2D8;border-radius:14px;overflow:hidden;background:#fff" style-hover="box-shadow:0 8px 24px rgba(0,0,0,0.08)">
+      <div style="width:100%;height:190px"><image-slot id="realizace-8" shape="rect" placeholder="Náhledová fotka zakázky"></image-slot></div>
+      <div style="padding:18px">
+        <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:16px;color:#1C1B19;margin:0 0 8px;line-height:1.3">Nová realizace</h3>
+        <p style="font-size:13.5px;line-height:1.55;color:#4A4744;margin:0">Popis zakázky doplníme.</p>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<section style="background:#F5F2EC;padding:80px 48px;text-align:center">
+  <h2 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:30px;color:#1C1B19;margin:0 0 16px">Líbí se vám náš přístup?</h2>
+  <p style="font-size:16px;color:#4A4744;margin:0 0 32px">Napište nám o svém záměru, rádi ho probereme.</p>
+  <a href="kontakt.dc.html" style="background:#E2231A;color:#fff;padding:16px 36px;border-radius:8px;font-weight:600;font-size:16px" style-hover="background:#B8180F">Vyplnit poptávkový formulář</a>
+</section>
+
+<footer style="background:#1C1B19;padding:64px 48px 32px">
+  <div style="max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px">
+    <div>
+      <span style="font-family:'Poppins',sans-serif;font-weight:700;font-size:20px;color:#E2231A">SUMO</span><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:12px;color:#fff;letter-spacing:2px"> STAVBY</span>
+      <p style="font-size:14px;line-height:1.6;color:#B9B6AF;margin:16px 0 0;max-width:340px">Výstavba a rekonstrukce rodinných i bytových domů na klíč – od studie po realizaci.</p>
+    </div>
+    <div>
+      <h4 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:14px;color:#fff;margin:0 0 16px">Navigace</h4>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+        <a href="index.dc.html" style="color:#B9B6AF">Domů</a>
+        <a href="o-nas.dc.html" style="color:#B9B6AF">O nás</a>
+        <a href="sluzby.dc.html" style="color:#B9B6AF">Služby</a>
+        <a href="realizace.dc.html" style="color:#B9B6AF">Realizace</a>
+        <a href="kariera.dc.html" style="color:#B9B6AF">Kariéra</a>
+        <a href="blog.dc.html" style="color:#B9B6AF">Blog</a>
+        <a href="kontakt.dc.html" style="color:#B9B6AF">Kontakt</a>
+      </div>
+    </div>
+    <div>
+      <h4 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:14px;color:#fff;margin:0 0 16px">Kontakt</h4>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;color:#B9B6AF">
+        <span>Dukelská 134, 739 91 Jablunkov</span>
+        <a href="tel:+420778525725" style="color:#B9B6AF">778 525 725</a>
+        <a href="mailto:sumostavby@gmail.com" style="color:#B9B6AF">sumostavby@gmail.com</a>
+        <span>IČO: 05506913</span>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1160px;margin:48px auto 0;padding-top:24px;border-top:1px solid #33322F;font-size:13px;color:#7A776F">© 2026 SUMO stavby. Všechna práva vyhrazena.</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { q: '' };
+  renderVals() {
+    const INDEX = [
+      { title: 'Domů', href: 'index.dc.html', note: 'Úvodní stránka', kw: 'domů úvod hlavní stránka sumo stavby' },
+      { title: 'O nás', href: 'o-nas.dc.html', note: 'Kdo jsme a naše hodnoty', kw: 'o nás firma hodnoty tým poctivost kvalita osobní přístup jablunkov' },
+      { title: 'Služby', href: 'sluzby.dc.html', note: 'Studie, projekt, povolení, realizace', kw: 'služby studie návrh projektová dokumentace stavební povolení prováděcí realizace na klíč rekonstrukce výstavba' },
+      { title: 'Realizace', href: 'realizace.dc.html', note: 'Fotogalerie dokončených staveb', kw: 'realizace reference fotografie galerie stavby dokončené' },
+      { title: 'Kontakt', href: 'kontakt.dc.html', note: 'Poptávkový formulář a kontakty', kw: 'kontakt poptávka formulář telefon e-mail adresa ičo' },
+      { title: 'Postup spolupráce', href: 'index.dc.html', note: 'Jak probíhá spolupráce krok za krokem', kw: 'postup spolupráce kroky konzultace předání' },
+      { title: 'Recenze klientů', href: 'index.dc.html', note: 'Co říkají naši klienti', kw: 'recenze klienti hodnocení' }
+    ];
+    const q = this.state.q.trim().toLowerCase();
+    const results = q ? INDEX.filter(p => (p.title + ' ' + p.kw).toLowerCase().includes(q)).slice(0, 6) : [];
+    return {
+      q: this.state.q,
+      setQ: e => this.setState({ q: e.target.value }),
+      results,
+      hasResults: results.length > 0
+    };
+  }
+}
+</script>
+</body>
+</html>

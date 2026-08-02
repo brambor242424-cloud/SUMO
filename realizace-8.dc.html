@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<template id="__bundler_thumbnail" data-bg-color="#E2231A">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#E2231A"></rect>
+    <text x="600" y="390" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="700" font-size="140" fill="#ffffff">SUMO</text>
+    <text x="600" y="500" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="600" font-size="80" fill="#ffffff">stavby</text>
+  </svg>
+</template>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Inter',sans-serif;background:#FFFFFF;color:#4A4744}
+a{color:#E2231A;text-decoration:none}
+a:hover{color:#B8180F}
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+
+<div style="max-width:100%;overflow-x:hidden">
+
+<header style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px 24px;padding:18px 32px;background:#fff;border-bottom:1px solid #E7E2D8;position:fixed;top:0;left:0;right:0;z-index:50">
+  <a href="index.dc.html" style="display:flex;flex-direction:column;line-height:0.95">
+    <span style="font-family:'Poppins',sans-serif;font-weight:700;font-size:22px;color:#E2231A;letter-spacing:0.5px">SUMO</span>
+    <span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:13px;color:#1C1B19;letter-spacing:2px">STAVBY</span>
+  </a>
+  <nav style="display:flex;gap:24px;font-size:15px;font-weight:500;white-space:nowrap">
+    <a href="index.dc.html" style="color:#1C1B19">Domů</a>
+    <a href="o-nas.dc.html" style="color:#1C1B19">O nás</a>
+    <a href="sluzby.dc.html" style="color:#1C1B19">Služby</a>
+    <a href="realizace.dc.html" style="color:#E2231A;font-weight:700">Realizace</a>
+    <a href="kariera.dc.html" style="color:#1C1B19">Kariéra</a>
+    <a href="blog.dc.html" style="color:#1C1B19">Blog</a>
+    <a href="kontakt.dc.html" style="color:#1C1B19">Kontakt</a>
+  </nav>
+  <div style="display:flex;align-items:center;gap:24px">
+    <a href="kontakt.dc.html" style="background:#E2231A;color:#fff;padding:11px 22px;border-radius:8px;font-weight:600;font-size:14px;white-space:nowrap" style-hover="background:#B8180F">Nezávazná poptávka</a>
+  </div>
+</header>
+<div style="height:74px"></div>
+
+<section style="padding:56px 48px 16px;max-width:1160px;margin:0 auto">
+  <div style="font-size:13.5px;color:#8A867F;margin-bottom:16px">
+    <a href="index.dc.html" style="color:#8A867F">Domů</a> / <a href="realizace.dc.html" style="color:#8A867F">Realizace</a> / <span style="color:#1C1B19;font-weight:600">Nová realizace</span>
+  </div>
+  <span style="display:inline-block;background:#F5F2EC;color:#E2231A;font-weight:600;font-size:13px;letter-spacing:1px;padding:6px 14px;border-radius:100px;margin-bottom:20px">REALIZACE</span>
+  <h1 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:36px;color:#1C1B19;margin:0 0 12px">Nová realizace</h1>
+  <p style="font-size:16px;line-height:1.7;color:#4A4744;margin:0 0 40px;max-width:760px">Popis zakázky doplníme.</p>
+</section>
+
+<section style="max-width:1160px;margin:0 auto;padding:0 48px 96px">
+  <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px">
+    <div style="width:100%;height:260px;cursor:zoom-in" onClick="{{ openLightbox }}" data-slot-id="p8-img1"><image-slot id="p8-img1" shape="rounded" radius="12" placeholder="Fotografie zakázky"></image-slot></div>
+    <div style="width:100%;height:260px;cursor:zoom-in" onClick="{{ openLightbox }}" data-slot-id="p8-img2"><image-slot id="p8-img2" shape="rounded" radius="12" placeholder="Fotografie zakázky"></image-slot></div>
+    <div style="width:100%;height:260px;cursor:zoom-in" onClick="{{ openLightbox }}" data-slot-id="p8-img3"><image-slot id="p8-img3" shape="rounded" radius="12" placeholder="Fotografie zakázky"></image-slot></div>
+    <div style="width:100%;height:260px;cursor:zoom-in" onClick="{{ openLightbox }}" data-slot-id="p8-img4"><image-slot id="p8-img4" shape="rounded" radius="12" placeholder="Fotografie zakázky"></image-slot></div>
+  </div>
+</section>
+
+<sc-if value="{{ lightboxOpen }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;inset:0;background:rgba(20,19,18,0.92);z-index:1000;display:flex;align-items:center;justify-content:center;padding:40px" onClick="{{ closeLightbox }}">
+    {{ lightboxImg }}
+    <button onClick="{{ prevImage }}" style="position:absolute;left:20px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.12);border:none;color:#fff;width:48px;height:48px;border-radius:50%;font-size:24px;cursor:pointer;font-family:'Inter',sans-serif" style-hover="background:rgba(255,255,255,0.24)">‹</button>
+    <button onClick="{{ nextImage }}" style="position:absolute;right:20px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.12);border:none;color:#fff;width:48px;height:48px;border-radius:50%;font-size:24px;cursor:pointer;font-family:'Inter',sans-serif" style-hover="background:rgba(255,255,255,0.24)">›</button>
+    <button onClick="{{ closeLightbox }}" style="position:absolute;top:28px;right:36px;background:none;border:none;color:#fff;font-size:36px;line-height:1;cursor:pointer;font-family:'Inter',sans-serif">×</button>
+  </div>
+</sc-if>
+
+<section style="background:#F5F2EC;padding:80px 48px;text-align:center">
+  <h2 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:28px;color:#1C1B19;margin:0 0 16px">Líbí se vám tato realizace?</h2>
+  <p style="font-size:16px;color:#4A4744;margin:0 0 32px">Napište nám o svém záměru, rádi ho probereme.</p>
+  <a href="kontakt.dc.html" style="background:#E2231A;color:#fff;padding:16px 36px;border-radius:8px;font-weight:600;font-size:16px" style-hover="background:#B8180F">Vyplnit poptávkový formulář</a>
+</section>
+
+<footer style="background:#1C1B19;padding:64px 48px 32px">
+  <div style="max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px">
+    <div>
+      <span style="font-family:'Poppins',sans-serif;font-weight:700;font-size:20px;color:#E2231A">SUMO</span><span style="font-family:'Poppins',sans-serif;font-weight:600;font-size:12px;color:#fff;letter-spacing:2px"> STAVBY</span>
+      <p style="font-size:14px;line-height:1.6;color:#B9B6AF;margin:16px 0 0;max-width:340px">Výstavba a rekonstrukce rodinných i bytových domů na klíč – od studie po realizaci.</p>
+    </div>
+    <div>
+      <h4 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:14px;color:#fff;margin:0 0 16px">Navigace</h4>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+        <a href="index.dc.html" style="color:#B9B6AF">Domů</a>
+        <a href="o-nas.dc.html" style="color:#B9B6AF">O nás</a>
+        <a href="sluzby.dc.html" style="color:#B9B6AF">Služby</a>
+        <a href="realizace.dc.html" style="color:#B9B6AF">Realizace</a>
+        <a href="kariera.dc.html" style="color:#B9B6AF">Kariéra</a>
+        <a href="blog.dc.html" style="color:#B9B6AF">Blog</a>
+        <a href="kontakt.dc.html" style="color:#B9B6AF">Kontakt</a>
+      </div>
+    </div>
+    <div>
+      <h4 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:14px;color:#fff;margin:0 0 16px">Kontakt</h4>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;color:#B9B6AF">
+        <span>Dukelská 134, 739 91 Jablunkov</span>
+        <a href="tel:+420778525725" style="color:#B9B6AF">778 525 725</a>
+        <a href="mailto:sumostavby@gmail.com" style="color:#B9B6AF">sumostavby@gmail.com</a>
+        <span>IČO: 05506913</span>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1160px;margin:48px auto 0;padding-top:24px;border-top:1px solid #33322F;font-size:13px;color:#7A776F">© 2026 SUMO stavby. Všechna práva vyhrazena.</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lightboxIndex: -1 };
+  slotIds = ['p8-img1','p8-img2','p8-img3','p8-img4'];
+
+  getSrc(id) {
+    const slot = document.getElementById(id);
+    const img = slot && slot.shadowRoot && slot.shadowRoot.querySelector('.frame img');
+    return img && img.src ? img.src : '';
+  }
+
+  renderVals() {
+    const idx = this.state.lightboxIndex;
+    const open = idx >= 0;
+    const src = open ? this.getSrc(this.slotIds[idx]) : '';
+    return {
+      lightboxOpen: open,
+      lightboxImg: src ? React.createElement('img', { src, style: { maxWidth: '100%', maxHeight: '100%', borderRadius: '12px', boxShadow: '0 20px 60px rgba(0,0,0,0.5)' } }) : null,
+      openLightbox: e => {
+        const slotId = e.currentTarget.getAttribute('data-slot-id');
+        const i = this.slotIds.indexOf(slotId);
+        if (i >= 0) this.setState({ lightboxIndex: i });
+      },
+      closeLightbox: () => this.setState({ lightboxIndex: -1 }),
+      prevImage: e => { e.stopPropagation(); this.setState(s => ({ lightboxIndex: (s.lightboxIndex - 1 + this.slotIds.length) % this.slotIds.length })); },
+      nextImage: e => { e.stopPropagation(); this.setState(s => ({ lightboxIndex: (s.lightboxIndex + 1) % this.slotIds.length })); }
+    };
+  }
+}
+</script>
+</body>
+</html>
