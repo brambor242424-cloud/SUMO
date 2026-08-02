@@ -21,6 +21,7 @@
 body{margin:0;font-family:'Inter',sans-serif;background:#FFFFFF;color:#4A4744}
 a{color:#E2231A;text-decoration:none}
 a:hover{color:#B8180F}
+@keyframes heroFade{from{opacity:0}to{opacity:1}}
 </style>
 <script src="./image-slot.js"></script>
 </helmet>
@@ -51,14 +52,21 @@ a:hover{color:#B8180F}
   <div>
     <span style="display:inline-block;background:#F5F2EC;color:#E2231A;font-weight:600;font-size:13px;letter-spacing:1px;padding:6px 14px;border-radius:100px;margin-bottom:24px">STAVEBNÍ FIRMA · JABLUNKOV</span>
     <h1 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:52px;line-height:1.12;color:#1C1B19;margin:0 0 24px">Stavíme domy,<br>na které bude<br>rodina hrdá.</h1>
-    <p style="font-size:18px;line-height:1.6;color:#4A4744;margin:0 0 36px;max-width:520px">Jsme stavební firma, která se specializuje na výstavbu a rekonstrukce rodinných i bytových domů. Stavíme srdcem i rozumem – s důrazem na kvalitu, poctivost a osobní přístup ke každému projektu.</p>
+    <p style="font-size:18px;line-height:1.6;color:#4A4744;margin:0 0 36px;max-width:520px">Jsme stavební firma, která se specializuje na výstavbu a rekonstrukce rodinných i bytových domů. Stavíme srdcem i rozumem – s důrazem na kvalitu, poctivost a osobní přístup ke každému projektu. Zaměřujeme se hlavně na rodinné domy, rekonstrukce a bytové domy.</p>
     <div style="display:flex;gap:16px;flex-wrap:wrap">
       <a href="kontakt.dc.html" style="background:#E2231A;color:#fff;padding:16px 32px;border-radius:8px;font-weight:600;font-size:16px" style-hover="background:#B8180F">Nezávazná poptávka</a>
       <a href="sluzby.dc.html" style="border:1.5px solid #1C1B19;color:#1C1B19;padding:16px 32px;border-radius:8px;font-weight:600;font-size:16px" style-hover="background:#1C1B19;color:#fff">Naše služby</a>
     </div>
   </div>
-  <div style="width:100%;height:460px">
-    <image-slot id="hero-image" shape="rounded" radius="16" placeholder="Fotografie realizace – doplníme" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=75&amp;w=1600&amp;auto=format&amp;fit=crop" credit="Photo by Frames For Your Heart on Unsplash" credit-href="https://unsplash.com/@framesforyourheart"></image-slot>
+  <div style="width:100%;height:600px;border-radius:16px;position:relative;overflow:hidden;transition:transform 0.15s,box-shadow 0.15s" style-hover="transform:translateY(-6px);box-shadow:0 12px 24px rgba(0,0,0,0.1)">
+    <img src="{{ heroSrc }}" alt="" style="width:100%;height:100%;object-fit:cover;display:block;animation:heroFade 0.35s ease" key="{{ heroSrc }}" />
+    <button onClick="{{ heroPrev }}" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);background:rgba(28,27,25,0.55);border:none;color:#fff;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:18px">‹</button>
+    <button onClick="{{ heroNext }}" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:rgba(28,27,25,0.55);border:none;color:#fff;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:18px">›</button>
+    <div style="position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:8px">
+      <sc-for list="{{ heroDots }}" as="dot" hint-placeholder-count="3">
+        <div onClick="{{ dot.select }}" style="width:8px;height:8px;border-radius:50%;background:{{ dot.color }};cursor:pointer"></div>
+      </sc-for>
+    </div>
   </div>
 </section>
 
@@ -66,23 +74,27 @@ a:hover{color:#B8180F}
   <div style="max-width:1160px;margin:0 auto">
     <h2 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:34px;color:#1C1B19;margin:0 0 48px;text-align:center">Proč stavět s námi</h2>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
-      <div style="background:#fff;border-radius:16px;padding:32px 28px">
-        <div style="width:64px;height:64px;margin-bottom:20px"><image-slot id="why-icon-1" shape="rounded" radius="16" placeholder="Ikona"></image-slot></div>
+      <div style="background:#fff;border-radius:16px;padding:32px 28px;text-align:center;transition:transform 0.15s,box-shadow 0.15s;border-bottom:4px solid #1C1B19" style-hover="transform:translateY(-6px);box-shadow:0 12px 24px rgba(0,0,0,0.1)">
+        <div style="width:72px;height:72px;margin:0 auto 16px;border-radius:50%;overflow:hidden;background:#F5F2EC"><img src="assets/icon-poctivost.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block" /></div>
+        <div style="width:32px;height:3px;background:#E2231A;margin:0 auto 16px;border-radius:2px"></div>
         <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19px;color:#1C1B19;margin:0 0 10px">Poctivost</h3>
         <p style="font-size:15px;line-height:1.6;color:#4A4744;margin:0">Otevřená komunikace a reálné termíny i rozpočty po celou dobu stavby.</p>
       </div>
-      <div style="background:#fff;border-radius:16px;padding:32px 28px">
-        <div style="width:64px;height:64px;margin-bottom:20px"><image-slot id="why-icon-2" shape="rounded" radius="16" placeholder="Ikona"></image-slot></div>
+      <div style="background:#fff;border-radius:16px;padding:32px 28px;text-align:center;transition:transform 0.15s,box-shadow 0.15s;border-bottom:4px solid #1C1B19" style-hover="transform:translateY(-6px);box-shadow:0 12px 24px rgba(0,0,0,0.1)">
+        <div style="width:72px;height:72px;margin:0 auto 16px;border-radius:50%;overflow:hidden;background:#F5F2EC"><img src="assets/icon-kvalita.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block" /></div>
+        <div style="width:32px;height:3px;background:#E2231A;margin:0 auto 16px;border-radius:2px"></div>
         <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19px;color:#1C1B19;margin:0 0 10px">Kvalita</h3>
         <p style="font-size:15px;line-height:1.6;color:#4A4744;margin:0">Pečlivé provedení a kontrola kvality na každém kroku výstavby.</p>
       </div>
-      <div style="background:#fff;border-radius:16px;padding:32px 28px">
-        <div style="width:64px;height:64px;margin-bottom:20px"><image-slot id="why-icon-3" shape="rounded" radius="16" placeholder="Ikona"></image-slot></div>
+      <div style="background:#fff;border-radius:16px;padding:32px 28px;text-align:center;transition:transform 0.15s,box-shadow 0.15s;border-bottom:4px solid #1C1B19" style-hover="transform:translateY(-6px);box-shadow:0 12px 24px rgba(0,0,0,0.1)">
+        <div style="width:72px;height:72px;margin:0 auto 16px;border-radius:50%;overflow:hidden;background:#F5F2EC"><img src="assets/icon-osobni-pristup.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block" /></div>
+        <div style="width:32px;height:3px;background:#E2231A;margin:0 auto 16px;border-radius:2px"></div>
         <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19px;color:#1C1B19;margin:0 0 10px">Osobní přístup</h3>
         <p style="font-size:15px;line-height:1.6;color:#4A4744;margin:0">Každý projekt řešíme individuálně, s jedním kontaktním člověkem.</p>
       </div>
-      <div style="background:#fff;border-radius:16px;padding:32px 28px">
-        <div style="width:64px;height:64px;margin-bottom:20px"><image-slot id="why-icon-4" shape="rounded" radius="16" placeholder="Ikona"></image-slot></div>
+      <div style="background:#fff;border-radius:16px;padding:32px 28px;text-align:center;transition:transform 0.15s,box-shadow 0.15s;border-bottom:4px solid #1C1B19" style-hover="transform:translateY(-6px);box-shadow:0 12px 24px rgba(0,0,0,0.1)">
+        <div style="width:72px;height:72px;margin:0 auto 16px;border-radius:50%;overflow:hidden;background:#F5F2EC"><img src="assets/icon-vse-na-klic.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block" /></div>
+        <div style="width:32px;height:3px;background:#E2231A;margin:0 auto 16px;border-radius:2px"></div>
         <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19px;color:#1C1B19;margin:0 0 10px">Vše na klíč</h3>
         <p style="font-size:15px;line-height:1.6;color:#4A4744;margin:0">Od studie po kolaudaci zajistíme kompletní realizaci pod jednou střechou.</p>
       </div>
@@ -91,64 +103,69 @@ a:hover{color:#B8180F}
 </section>
 
 <section style="padding:96px 48px;max-width:1160px;margin:0 auto">
-  <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;flex-wrap:wrap;gap:16px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:16px;flex-wrap:wrap;gap:16px">
     <h2 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:34px;color:#1C1B19;margin:0">Komplexní realizace na klíč</h2>
     <a href="sluzby.dc.html" style="font-weight:600;font-size:15px">Všechny služby →</a>
   </div>
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
-    <div style="border:1px solid #E7E2D8;border-radius:14px;padding:32px 24px">
-      <span style="font-family:'Poppins',sans-serif;font-weight:700;font-size:28px;color:#E2231A">01</span>
-      <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:17px;color:#1C1B19;margin:16px 0 10px">Studie a návrh</h3>
-      <p style="font-size:14px;line-height:1.6;color:#4A4744;margin:0">Architektonická studie a vizualizace budoucí stavby.</p>
-    </div>
-    <div style="border:1px solid #E7E2D8;border-radius:14px;padding:32px 24px">
-      <span style="font-family:'Poppins',sans-serif;font-weight:700;font-size:28px;color:#E2231A">02</span>
-      <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:17px;color:#1C1B19;margin:16px 0 10px">Projekt a povolení</h3>
-      <p style="font-size:14px;line-height:1.6;color:#4A4744;margin:0">Projektová dokumentace a vyřízení stavebního povolení.</p>
-    </div>
-    <div style="border:1px solid #E7E2D8;border-radius:14px;padding:32px 24px">
-      <span style="font-family:'Poppins',sans-serif;font-weight:700;font-size:28px;color:#E2231A">03</span>
-      <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:17px;color:#1C1B19;margin:16px 0 10px">Prováděcí dokumentace</h3>
-      <p style="font-size:14px;line-height:1.6;color:#4A4744;margin:0">Detailní výkresy a rozpočet pro samotnou realizaci.</p>
-    </div>
-    <div style="border:1px solid #E7E2D8;border-radius:14px;padding:32px 24px">
-      <span style="font-family:'Poppins',sans-serif;font-weight:700;font-size:28px;color:#E2231A">04</span>
-      <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:17px;color:#1C1B19;margin:16px 0 10px">Realizace stavby</h3>
-      <p style="font-size:14px;line-height:1.6;color:#4A4744;margin:0">Výstavba na klíč, řízení dodavatelů a předání díla.</p>
-    </div>
+  <p style="font-size:15.5px;line-height:1.6;color:#4A4744;margin:0 0 40px;max-width:680px">Každou z fází zvládneme samostatně, nebo vám celý proces provedeme na klíč od začátku do konce.</p>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+    <a href="sluzby.dc.html#projekt" onMouseEnter="{{ enterCard1 }}" onMouseLeave="{{ leaveCard }}" style="display:block;border:1px solid #E7E2D8;border-radius:16px;overflow:hidden;transition:transform 0.15s,box-shadow 0.15s;transform:{{ card1Transform }};box-shadow:{{ card1Shadow }}">
+      <div style="width:100%;height:200px"><image-slot id="sluzba-1" shape="rect" placeholder="Fotografie – projektová dokumentace"></image-slot></div>
+      <div style="padding:24px 28px 28px">
+        <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19px;color:#1C1B19;margin:0 0 10px">Projekční část</h3>
+        <p style="font-size:14px;line-height:1.6;color:#4A4744;margin:0">Zajišťujeme kompletní projektovou přípravu – od studie a návrhu přes dokumentaci pro povolení až po prováděcí řešení. Každý návrh připravujeme s důrazem na funkčnost, rozpočet a návaznost na realizaci.</p>
+      </div>
+    </a>
+    <a href="sluzby.dc.html#realizace-klic" onMouseEnter="{{ enterCard2 }}" onMouseLeave="{{ leaveCard }}" style="display:block;border:1px solid #E7E2D8;border-radius:16px;overflow:hidden;transition:transform 0.15s,box-shadow 0.15s;transform:{{ card2Transform }};box-shadow:{{ card2Shadow }}">
+      <div style="width:100%;height:200px"><image-slot id="sluzba-4" shape="rect" placeholder="Fotografie – realizace na klíč"></image-slot></div>
+      <div style="padding:24px 28px 28px">
+        <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19px;color:#1C1B19;margin:0 0 10px">Realizace stavby</h3>
+        <p style="font-size:14px;line-height:1.6;color:#4A4744;margin:0">Postaráme se o kompletní realizaci stavby na klíč i o koordinaci jednotlivých profízí. Hlídáme průběh prací, kvalitu provedení, termíny i plynulou organizaci celé zakázky.</p>
+      </div>
+    </a>
+    <a href="sluzby.dc.html#truhlarske-prace" onMouseEnter="{{ enterCard3 }}" onMouseLeave="{{ leaveCard }}" style="display:block;border:1px solid #E7E2D8;border-radius:16px;overflow:hidden;transition:transform 0.15s,box-shadow 0.15s;transform:{{ card3Transform }};box-shadow:{{ card3Shadow }}">
+      <div style="width:100%;height:200px"><image-slot id="sluzba-5" shape="rect" placeholder="Fotografie – truhlářské prvky"></image-slot></div>
+      <div style="padding:24px 28px 28px">
+        <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:19px;color:#1C1B19;margin:0 0 10px">Truhlářské prvky</h3>
+        <p style="font-size:14px;line-height:1.6;color:#4A4744;margin:0">Navrhujeme a vyrábíme truhlářské prvky na míru podle konkrétního prostoru i požadavků klienta. Od vestavěného nábytku až po individuální interiérové detaily, které dotvářejí výsledný celek.</p>
+      </div>
+    </a>
   </div>
+  <a href="sluzby.dc.html#na-klic" onMouseEnter="{{ enterVnk }}" onMouseLeave="{{ leaveCard }}" style="display:block;margin-top:24px;border:1px solid #E7E2D8;border-radius:16px;overflow:hidden;transition:transform 0.15s,box-shadow 0.15s;transform:{{ vnkTransform }};box-shadow:{{ vnkShadow }}">
+    <div style="width:100%;height:200px;background-image:url('assets/vse-na-klic-hover.jpg');background-size:cover;background-position:center"></div>
+    <div style="padding:24px 28px 28px;display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+      <span style="font-family:'Poppins',sans-serif;font-weight:700;font-size:14px;color:#fff;letter-spacing:1px;background:#E2231A;padding:10px 20px;border-radius:100px">VŠE NA KLÍČ</span>
+      <p style="font-size:14.5px;line-height:1.5;color:#4A4744;margin:0;flex:1;min-width:220px">Pokud chcete mít celý projekt bez starostí, zvolte variantu vše na klíč – vše zajistíme za vás od návrhu až po realizaci.</p>
+    </div>
+  </a>
 </section>
 
-<section style="background:#1C1B19;padding:96px 48px">
+<section style="padding:64px 48px;margin:0 auto;background:#1C1B19">
   <div style="max-width:1160px;margin:0 auto">
-    <h2 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:34px;color:#fff;margin:0 0 48px;text-align:center">Jak probíhá spolupráce</h2>
-    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:20px">
-      <div>
-        <div style="color:#E2231A;font-family:'Poppins',sans-serif;font-weight:700;font-size:22px;margin-bottom:14px">1</div>
-        <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:15px;color:#fff;margin:0 0 8px">Konzultace</h3>
-        <p style="font-size:13.5px;line-height:1.6;color:#B9B6AF;margin:0">Nezávazná schůzka a prohlídka pozemku.</p>
+  <h2 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:30px;color:#fff;margin:0 0 40px;text-align:center">U každého projektu vždy garantujeme</h2>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+    <div style="text-align:center;transition:transform 0.15s,box-shadow 0.15s;border-radius:16px;padding:12px" style-hover="transform:translateY(-6px);box-shadow:0 12px 24px rgba(0,0,0,0.1)">
+      <div style="width:44px;height:44px;border-radius:12px;background:#E2231A;margin:0 auto 18px;display:flex;align-items:center;justify-content:center">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="8" y1="8" x2="8" y2="8"></line><line x1="12" y1="8" x2="12" y2="8"></line><line x1="16" y1="8" x2="16" y2="8"></line><line x1="8" y1="12" x2="8" y2="12"></line><line x1="12" y1="12" x2="12" y2="12"></line><line x1="16" y1="12" x2="16" y2="12"></line><line x1="8" y1="16" x2="8" y2="16"></line><line x1="12" y1="16" x2="12" y2="16"></line></svg>
       </div>
-      <div>
-        <div style="color:#E2231A;font-family:'Poppins',sans-serif;font-weight:700;font-size:22px;margin-bottom:14px">2</div>
-        <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:15px;color:#fff;margin:0 0 8px">Studie</h3>
-        <p style="font-size:13.5px;line-height:1.6;color:#B9B6AF;margin:0">Návrh a vizualizace stavby.</p>
-      </div>
-      <div>
-        <div style="color:#E2231A;font-family:'Poppins',sans-serif;font-weight:700;font-size:22px;margin-bottom:14px">3</div>
-        <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:15px;color:#fff;margin:0 0 8px">Povolení</h3>
-        <p style="font-size:13.5px;line-height:1.6;color:#B9B6AF;margin:0">Projekt a vyřízení stavebního povolení.</p>
-      </div>
-      <div>
-        <div style="color:#E2231A;font-family:'Poppins',sans-serif;font-weight:700;font-size:22px;margin-bottom:14px">4</div>
-        <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:15px;color:#fff;margin:0 0 8px">Realizace</h3>
-        <p style="font-size:13.5px;line-height:1.6;color:#B9B6AF;margin:0">Samotná výstavba pod naším dohledem.</p>
-      </div>
-      <div>
-        <div style="color:#E2231A;font-family:'Poppins',sans-serif;font-weight:700;font-size:22px;margin-bottom:14px">5</div>
-        <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:15px;color:#fff;margin:0 0 8px">Předání</h3>
-        <p style="font-size:13.5px;line-height:1.6;color:#B9B6AF;margin:0">Kolaudace, předání a záruční servis.</p>
-      </div>
+      <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:17px;color:#fff;margin:0 0 10px">Přehledný rozpočet<br>všech položek</h3>
+      <p style="font-size:14.5px;line-height:1.6;color:#B9B6AF;margin:0">Před začátkem každé spolupráce vypracujeme přehledný rozpočet všech položek, který s vámi probereme náš projektant a vše vám vysvětlí.</p>
     </div>
+    <div style="text-align:center;transition:transform 0.15s,box-shadow 0.15s;border-radius:16px;padding:12px" style-hover="transform:translateY(-6px);box-shadow:0 12px 24px rgba(0,0,0,0.1)">
+      <div style="width:44px;height:44px;border-radius:12px;background:#E2231A;margin:0 auto 18px;display:flex;align-items:center;justify-content:center">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
+      </div>
+      <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:17px;color:#fff;margin:0 0 10px">Záruka 24 měsíců<br>na naše služby</h3>
+      <p style="font-size:14.5px;line-height:1.6;color:#B9B6AF;margin:0">Každý projekt doprovází smlouva o dílo, ve které jsou stanoveny také veškeré podmínky spolupráce a záruka na naše služby a produkty po dobu 24 měsíců.</p>
+    </div>
+    <div style="text-align:center;transition:transform 0.15s,box-shadow 0.15s;border-radius:16px;padding:12px" style-hover="transform:translateY(-6px);box-shadow:0 12px 24px rgba(0,0,0,0.1)">
+      <div style="width:44px;height:44px;border-radius:12px;background:#E2231A;margin:0 auto 18px;display:flex;align-items:center;justify-content:center">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"></circle><path d="M10.5 12.5 19 4"></path><path d="M17 6l2 2"></path><path d="M14 9l2 2"></path></svg>
+      </div>
+      <h3 style="font-family:'Poppins',sans-serif;font-weight:600;font-size:17px;color:#fff;margin:0 0 10px">Vždy dodržíme<br>stanovený termín</h3>
+      <p style="font-size:14.5px;line-height:1.6;color:#B9B6AF;margin:0">Každý projekt má svého dedikovaného projektového manažera, a právě díky tomu dokážeme zajistit dodržení stanoveného termínu.</p>
+    </div>
+  </div>
   </div>
 </section>
 
@@ -156,7 +173,7 @@ a:hover{color:#B8180F}
   <h2 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:34px;color:#1C1B19;margin:0 0 12px;text-align:center">Co říkají naši klienti</h2>
   <p style="text-align:center;color:#8A867F;font-size:14px;margin:0 0 48px">Recenze z Google</p>
   <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:960px;margin:0 auto">
-    <div style="border:1px solid #E7E2D8;border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:16px">
+    <div style="border:1px solid #E7E2D8;border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:16px;transition:transform 0.15s,box-shadow 0.15s" style-hover="transform:translateY(-6px);box-shadow:0 12px 24px rgba(0,0,0,0.1)">
       <div style="color:#E2231A;font-weight:700;font-size:15px;letter-spacing:2px">★★★★★ <span style="color:#8A867F;font-weight:500;font-size:13px;letter-spacing:0">5/5</span></div>
       <p style="font-size:15px;line-height:1.65;color:#4A4744;margin:0;font-style:italic">„Firmu SUMO STAVBY můžu jen doporučit na 100 %. Byla jsem maximálně spokojená, jak s dělníky, tak i s panem vedoucím, který byl vždy ochotný mi poradit. Doporučuji.“</p>
       <div style="display:flex;align-items:center;gap:12px">
@@ -167,7 +184,7 @@ a:hover{color:#B8180F}
         </div>
       </div>
     </div>
-    <div style="border:1px solid #E7E2D8;border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:16px">
+    <div style="border:1px solid #E7E2D8;border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:16px;transition:transform 0.15s,box-shadow 0.15s" style-hover="transform:translateY(-6px);box-shadow:0 12px 24px rgba(0,0,0,0.1)">
       <div style="color:#E2231A;font-weight:700;font-size:15px;letter-spacing:2px">★★★★★ <span style="color:#8A867F;font-weight:500;font-size:13px;letter-spacing:0">5/5</span></div>
       <p style="font-size:15px;line-height:1.65;color:#4A4744;margin:0;font-style:italic">„Realizace zakázky zateplování RD touto firmou proběhla v pořádku a rád ji dál doporučím. Pan Sung je velmi vstřícný a vzdělaný v oboru.“</p>
       <div style="display:flex;align-items:center;gap:12px">
@@ -185,7 +202,7 @@ a:hover{color:#B8180F}
   <h2 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:32px;color:#1C1B19;margin:0 0 40px;text-align:center">Máte otázky?<br>Máme odpovědi</h2>
   <div style="display:flex;flex-direction:column;gap:0;border-top:1px solid #E7E2D8">
     <sc-for list="{{ faqs }}" as="faq" hint-placeholder-count="5">
-      <div style="border-bottom:1px solid #E7E2D8">
+      <div style="border-bottom:1px solid #E7E2D8;transition:transform 0.15s,box-shadow 0.15s;border-radius:10px" style-hover="transform:translateY(-4px);box-shadow:0 10px 20px rgba(0,0,0,0.08)">
         <div onClick="{{ toggleFaq }}" data-faq-index="{{ $index }}" style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 4px;cursor:pointer">
           <span style="font-weight:600;font-size:15.5px;color:#1C1B19">{{ faq.q }}</span>
           <span style="font-size:20px;color:#1C1B19;flex-shrink:0">{{ faq.sign }}</span>
@@ -246,7 +263,8 @@ a:hover{color:#B8180F}
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{}">
 class Component extends DCLogic {
-  state = { q: '', openFaq: 1 };
+  state = { q: '', openFaq: -1, hoverCard: null, heroIndex: 0 };
+  heroImages = ['assets/hero-1.jpg', 'assets/hero-2.jpg', 'assets/hero-3.jpg'];
   faqData = [
     { q: 'Kolik bude stát rekonstrukce?', a: 'Cena se vždy odvíjí od konkrétního zadání – rozsahu prací, stavu objektu a zvolených materiálů. Nejpřesnější nacenění vychází z architektonického návrhu a projektové dokumentace, kterou vám na začátku spolupráce připravíme.' },
     { q: 'Co je architektonický návrh?', a: 'Jde o výchozí krok každého projektu. Náš architekt navrhne řešení podle vašich představ a potřeb a součástí návrhu je i stavební dokumentace, podle níž se stavba následně realizuje.' },
@@ -255,6 +273,10 @@ class Component extends DCLogic {
     { q: 'Co obnáší rekonstrukce bytu?', a: 'Po architektonickém návrhu a vyřízení potřebné administrativy následuje samotná realizace: bourací a zednické práce, nové rozvody elektřiny, vody a topení, omítky, obklady a dlažby, osazení dveří, montáž zásuvek, vypínačů a svítidel, pokládka podlah a montáž kuchyně i vestavěných skříní na míru – a na závěr úklid a předání s protokolem.' }
   ];
   renderVals() {
+    const hc = this.state.hoverCard;
+    const heroIdx = this.state.heroIndex;
+    const enterCard = n => () => this.setState({ hoverCard: n });
+    const leaveCard = () => this.setState({ hoverCard: null });
     const INDEX = [
       { title: 'Domů', href: 'index.dc.html', note: 'Úvodní stránka', kw: 'domů úvod hlavní stránka sumo stavby' },
       { title: 'O nás', href: 'o-nas.dc.html', note: 'Kdo jsme a naše hodnoty', kw: 'o nás firma hodnoty tým poctivost kvalita osobní přístup jablunkov' },
@@ -269,6 +291,17 @@ class Component extends DCLogic {
     return {
       q: this.state.q,
       setQ: e => this.setState({ q: e.target.value }),
+      enterCard1: enterCard(1), enterCard2: enterCard(2), enterCard3: enterCard(3), leaveCard,
+      card1Transform: hc === 1 ? 'translateY(-6px)' : 'translateY(0)', card1Shadow: hc === 1 ? '0 12px 24px rgba(0,0,0,0.1)' : 'none',
+      card2Transform: hc === 2 ? 'translateY(-6px)' : 'translateY(0)', card2Shadow: hc === 2 ? '0 12px 24px rgba(0,0,0,0.1)' : 'none',
+      card3Transform: hc === 3 ? 'translateY(-6px)' : 'translateY(0)', card3Shadow: hc === 3 ? '0 12px 24px rgba(0,0,0,0.1)' : 'none',
+      enterVnk: enterCard('vnk'),
+      heroSrc: this.heroImages[heroIdx],
+      heroPrev: () => this.setState(s => ({ heroIndex: (s.heroIndex - 1 + this.heroImages.length) % this.heroImages.length })),
+      heroNext: () => this.setState(s => ({ heroIndex: (s.heroIndex + 1) % this.heroImages.length })),
+      heroDots: this.heroImages.map((_, i) => ({ color: i === heroIdx ? '#E2231A' : 'rgba(255,255,255,0.5)', select: () => this.setState({ heroIndex: i }) })),
+      vnkTransform: hc === 'vnk' ? 'translateY(-6px)' : 'translateY(0)',
+      vnkShadow: hc === 'vnk' ? '0 12px 24px rgba(0,0,0,0.1)' : 'none',
       results,
       hasResults: results.length > 0,
       faqs: this.faqData.map((f, i) => ({ q: f.q, intro: f.intro ?? f.a, steps: f.steps ?? [], open: this.state.openFaq === i, sign: this.state.openFaq === i ? '−' : '+' })),
